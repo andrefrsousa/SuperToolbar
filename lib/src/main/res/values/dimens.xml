@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="toolbar_elevation">8dp</dimen>
+    <dimen name="super_toolbar_default_elevation">8dp</dimen>
 
 </resources>

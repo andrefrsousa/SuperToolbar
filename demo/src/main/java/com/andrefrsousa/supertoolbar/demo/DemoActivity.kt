@@ -26,7 +26,7 @@ class DemoActivity : AppCompatActivity() {
         items_list.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
-                toolbar.toggleElevation(recyclerView.canScrollVertically(-1))
+                toolbar.setElevationVisibility(recyclerView.canScrollVertically(-1))
             }
         })
     }
