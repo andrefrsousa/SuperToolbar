@@ -19,16 +19,17 @@ class DemoActivity : AppCompatActivity() {
 
         toolbar.title = getString(R.string.app_name)
 
-        val layoutManager = LinearLayoutManager(this)
-        items_list.layoutManager = layoutManager
-        items_list.adapter = ItemsAdapter()
+        items_list.apply {
+            this.layoutManager = LinearLayoutManager(this@DemoActivity)
+            adapter = ItemsAdapter()
+            addOnScrollListener(object : RecyclerView.OnScrollListener() {
+                override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                    super.onScrolled(recyclerView, dx, dy)
+                    toolbar.setElevationVisibility(recyclerView.canScrollVertically(-1))
+                }
+            })
+        }
 
-        items_list.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-                toolbar.setElevationVisibility(recyclerView.canScrollVertically(-1))
-            }
-        })
     }
 }
 
@@ -36,9 +37,7 @@ class DemoActivity : AppCompatActivity() {
 
 class ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(parent.inflate(R.layout.list_item))
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(parent.inflate(R.layout.list_item))
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
     }
@@ -46,11 +45,8 @@ class ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ViewHolder>() {
     override fun getItemCount() = 15
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
         val text: TextView = view.text_view
     }
 }
 
-fun ViewGroup.inflate(layoutId: Int): View {
-    return LayoutInflater.from(context).inflate(layoutId, this, false)
-}
+private fun ViewGroup.inflate(layoutId: Int) = LayoutInflater.from(context).inflate(layoutId, this, false)!!
