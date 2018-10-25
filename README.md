@@ -7,6 +7,9 @@ Android native Toolbar on steroids 💪
 Animate the toolbar elevation when scrolling.
 It has been written **100% in Kotlin**. ❤️  
 
+## Spread Some :heart:  
+[![GitHub stars](https://img.shields.io/github/stars/andrefrsousa/supertoolbar.svg?style=social&label=Star)](https://github.com/andrefrsousa/supertoolbar) [![GitHub forks](https://img.shields.io/github/forks/andrefrsousa/supertoolbar.svg?style=social&label=Fork)](https://github.com/andrefrsousa/supertoolbar/fork) [![GitHub followers](https://img.shields.io/github/followers/andrefrsousa.svg?style=social&label=Follow)](https://github.com/andrefrsousa)  [![Twitter Follow](https://img.shields.io/twitter/follow/andrefrsousa.svg?style=social)](https://twitter.com/andrefrsousa)
+
 ## Download  
   
 This library is available in **jitpack**, so you need to add this repository to your root build.gradle at the end of repositories:
@@ -73,9 +76,6 @@ The are a group of general properties that you can define. These properties will
 <attr name="superToolbar_showElevationAtStart" format="boolean"/>
 
 ```
-
-## Spread Some :heart:  
-[![GitHub followers](https://img.shields.io/github/followers/andrefrsousa.svg?style=social&label=Follow)](https://github.com/andrefrsousa)  [![Twitter Follow](https://img.shields.io/twitter/follow/andrefrsousa.svg?style=social)](https://twitter.com/andrefrsousa)
   
 ## License  
   
