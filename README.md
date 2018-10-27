@@ -69,10 +69,10 @@ The are a group of general properties that you can define. These properties will
 
 ```xml
 
-// The duration of the elevation animation. By default if 250 miliseconds.
+// The duration of the elevation animation. By default is 250 miliseconds.
 <attr name="superToolbar_animationDuration" format="integer"/>
 
-// If you want to show the toolbar elevation when created. By default it start hidden.
+// If you want to show the toolbar elevation when created. By default is false.
 <attr name="superToolbar_showElevationAtStart" format="boolean"/>
 
 ```
