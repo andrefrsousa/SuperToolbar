@@ -75,6 +75,12 @@ The are a group of general properties that you can define. These properties will
 // If you want to show the toolbar elevation when created. By default is false.
 <attr name="superToolbar_showElevationAtStart" format="boolean"/>
 
+// Center the toolbar title. By default is false.
+<attr name="superToolbar_centerTitle" format="boolean"/>
+
+// Use a light font as the toolbar title. Default is false.
+<attr name="superToolbar_useLightFont" format="boolean"/>
+
 ```
   
 ## License  
