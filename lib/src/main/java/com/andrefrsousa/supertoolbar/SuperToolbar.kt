@@ -24,16 +24,24 @@
 package com.andrefrsousa.supertoolbar
 
 import android.content.Context
+import android.graphics.Typeface
+import android.os.Build
 import android.support.v4.view.ViewCompat
+import android.support.v7.widget.AppCompatTextView
 import android.support.v7.widget.Toolbar
 import android.util.AttributeSet
+import android.view.Gravity
 import android.view.animation.DecelerateInterpolator
 
 private const val DURATION = 250
 
 open class SuperToolbar : Toolbar {
 
+    private lateinit var titleView: AppCompatTextView
+
     private var isElevationShown = false
+    private var centerTitle = false
+    private var useLightFont = false
     private var animationDuration = 0L
     private var toolbarElevation = 0f
 
@@ -57,6 +65,8 @@ open class SuperToolbar : Toolbar {
         with(context.obtainStyledAttributes(attrs, R.styleable.SuperToolbar, defStyleAttr, 0)) {
             animationDuration = getInt(R.styleable.SuperToolbar_superToolbar_animationDuration, DURATION).toLong()
             isElevationShown = getBoolean(R.styleable.SuperToolbar_superToolbar_showElevationAtStart, false)
+            centerTitle = getBoolean(R.styleable.SuperToolbar_superToolbar_centerTitle, false)
+            useLightFont = getBoolean(R.styleable.SuperToolbar_superToolbar_useLightFont, false)
             recycle()
         }
 
@@ -73,6 +83,66 @@ open class SuperToolbar : Toolbar {
         if (!isElevationShown) {
             ViewCompat.setElevation(this, 0f)
         }
+
+        // Add a custom title view
+        if (centerTitle || useLightFont) {
+            titleView = inflate(R.layout.super_toolbar_title) as AppCompatTextView
+
+            if (useLightFont) {
+                titleView.typeface = Typeface.SANS_SERIF
+            }
+
+            if (centerTitle) {
+                val layoutParams = titleView.layoutParams as Toolbar.LayoutParams
+                layoutParams.gravity = Gravity.CENTER
+                addView(titleView, layoutParams)
+
+            } else {
+                addView(titleView)
+            }
+        }
+    }
+
+    override fun setTitle(resId: Int) {
+        if (::titleView.isInitialized) {
+            titleView.setText(resId)
+            return
+        }
+
+        super.setTitle(resId)
+    }
+
+    override fun setTitle(title: CharSequence?) {
+        if (::titleView.isInitialized) {
+            titleView.text = title
+            return
+        }
+
+        super.setTitle(title)
+    }
+
+    override fun setTitleTextAppearance(context: Context?, resId: Int) {
+        if (::titleView.isInitialized) {
+            if (hasMinimumSdk(Build.VERSION_CODES.M)) {
+                titleView.setTextAppearance(resId)
+
+            } else {
+                titleView.setTextAppearance(context, resId)
+            }
+
+            return
+        }
+
+        super.setTitleTextAppearance(context, resId)
+    }
+
+    override fun setTitleTextColor(color: Int) {
+        if (::titleView.isInitialized) {
+            titleView.setTextColor(color)
+            return
+        }
+
+        super.setTitleTextColor(color)
     }
 
     //region PUBLIC METHODS

@@ -11,7 +11,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/white"/>
+            android:background="@android:color/white"
+            app:superToolbar_useLightFont="true"
+            app:superToolbar_centerTitle="true"/>
 
     <android.support.v7.widget.RecyclerView
             android:id="@+id/items_list"

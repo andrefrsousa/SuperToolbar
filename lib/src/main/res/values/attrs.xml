@@ -4,6 +4,8 @@
     <declare-styleable name="SuperToolbar">
         <attr name="superToolbar_animationDuration" format="integer"/>
         <attr name="superToolbar_showElevationAtStart" format="boolean"/>
+        <attr name="superToolbar_centerTitle" format="boolean"/>
+        <attr name="superToolbar_useLightFont" format="boolean"/>
     </declare-styleable>
 
 </resources>
