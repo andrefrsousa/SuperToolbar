@@ -55,12 +55,9 @@ open class SuperToolbar : Toolbar {
         }
 
         with(context.obtainStyledAttributes(attrs, R.styleable.SuperToolbar, defStyleAttr, 0)) {
-            try {
-                animationDuration = getInt(R.styleable.SuperToolbar_superToolbar_animationDuration, DURATION).toLong()
-                isElevationShown = getBoolean(R.styleable.SuperToolbar_superToolbar_showElevationAtStart, false)
-            } finally {
-                recycle()
-            }
+            animationDuration = getInt(R.styleable.SuperToolbar_superToolbar_animationDuration, DURATION).toLong()
+            isElevationShown = getBoolean(R.styleable.SuperToolbar_superToolbar_showElevationAtStart, false)
+            recycle()
         }
 
         // If no elevation was defined we fallback to the default value
