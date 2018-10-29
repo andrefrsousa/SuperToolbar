@@ -89,7 +89,7 @@ open class SuperToolbar : Toolbar {
 
         isElevationShown = show
 
-        ViewCompat.animate(this).apply {
+        ViewCompat.animate(this).run {
             translationZ(if (show) toolbarElevation else 0f)
             interpolator = DecelerateInterpolator()
             duration = animationDuration
@@ -97,5 +97,5 @@ open class SuperToolbar : Toolbar {
         }
     }
 
-//endregion
+    //endregion
 }
