@@ -9,7 +9,7 @@ Android native Toolbar on steroids 💪
 * Center toolbar title
 * Light title font
 
-It has been written **100% in Kotlin**. ❤️  
+Also, it has been written **100% in Kotlin**. ❤️  
 
 ## Spread Some :heart:  
 [![GitHub stars](https://img.shields.io/github/stars/andrefrsousa/supertoolbar.svg?style=social&label=Star)](https://github.com/andrefrsousa/supertoolbar) [![GitHub forks](https://img.shields.io/github/forks/andrefrsousa/supertoolbar.svg?style=social&label=Fork)](https://github.com/andrefrsousa/supertoolbar/fork) [![GitHub followers](https://img.shields.io/github/followers/andrefrsousa.svg?style=social&label=Follow)](https://github.com/andrefrsousa)  [![Twitter Follow](https://img.shields.io/twitter/follow/andrefrsousa.svg?style=social)](https://twitter.com/andrefrsousa)
