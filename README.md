@@ -9,10 +9,9 @@
   
 ### Summary  
 
-**Some key features are:**
-* Animate the toolbar elevation when scrolling.
-* Center toolbar title
-* Light title font
+* Animate the toolbar elevation when scrolling
+* Center horizontal the toolbar title
+* Use light title font
 
 Also, it has been written **100% in Kotlin**. ❤️  
 
