@@ -51,10 +51,7 @@ In order to show the toolbar elevation you just need to call:
 fun setElevationVisibility(show: Boolean)
 ```  
 
-If what to have the same effect found in Google Messages app for example, you to add a scroll listener to your RecyclerView or ScrollView.
-An on the callback of the listener you use the method above.
-
-Here is an example:
+If what to have the same effect found in Google Messages app for example, you to add a scroll listener to your RecyclerView or ScrollView. Like this:
 
 ```kotlin
 
@@ -70,7 +67,7 @@ myRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
   
 ## Customization
   
-The are a group of general properties that you can define. These properties will be applied to all the SuperBottomSheet in your project.  
+You can costumize your toolber using the following attributes:
 
 ```xml
 
