@@ -11,9 +11,6 @@ Android native Toolbar on steroids 💪
 
 Also, it has been written **100% in Kotlin**. ❤️  
 
-## Spread Some :heart:  
-[![GitHub stars](https://img.shields.io/github/stars/andrefrsousa/supertoolbar.svg?style=social&label=Star)](https://github.com/andrefrsousa/supertoolbar) [![GitHub forks](https://img.shields.io/github/forks/andrefrsousa/supertoolbar.svg?style=social&label=Fork)](https://github.com/andrefrsousa/supertoolbar/fork) [![GitHub followers](https://img.shields.io/github/followers/andrefrsousa.svg?style=social&label=Follow)](https://github.com/andrefrsousa)  [![Twitter Follow](https://img.shields.io/twitter/follow/andrefrsousa.svg?style=social)](https://twitter.com/andrefrsousa)
-
 ## Download  
   
 This library is available in **jitpack**, so you need to add this repository to your root build.gradle at the end of repositories:
@@ -86,6 +83,17 @@ The are a group of general properties that you can define. These properties will
 <attr name="superToolbar_useLightFont" format="boolean"/>
 
 ```
+
+## Project Maintained By
+
+### [André Sousa](https://andrefrsousa.github.io)
+
+Design-focused Engineer | Front-end Developer | Open-Source Enthusiast | Android | Husband | Foodie
+
+<a href="https://www.linkedin.com/in/andrefrsousa/"><img src="https://github.com/andrefrsousa/social-icons/blob/master/linkedin.png?raw=true" width="40" style="margin-right:8px"></a>
+<a href="https://stackoverflow.com/users/1574250/andré-sousa"><img src="https://github.com/andrefrsousa/social-icons/blob/master/stackoverflow.png?raw=true" width="40" style="margin-right:8px"></a>
+<a href="https://medium.com/andré-sousa"><img src="https://github.com/andrefrsousa/social-icons/blob/master/medium.png?raw=true" width="40" style="margin-right:8px"></a>
+<a href="https://twitter.com/andrefrsousa"><img src="https://github.com/andrefrsousa/social-icons/blob/master/twitter.png?raw=true" width="40" style="margin-right:8px"></a>
   
 ## License  
   
