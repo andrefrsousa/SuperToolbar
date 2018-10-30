@@ -1,8 +1,13 @@
-# SuperToolbar
-Android native Toolbar on steroids 💪
-
-## Specs  
-[![](https://jitpack.io/v/andrefrsousa/SuperBottomSheet.svg)](https://jitpack.io/#andrefrsousa/SuperToolbar) [![API](https://img.shields.io/badge/API-14%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=14) [![Build Status](https://travis-ci.org/andrefrsousa/SuperToolbar.svg?branch=master)](https://travis-ci.org/andrefrsousa/SuperToolbar) [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-SuperToolbar-green.svg?style=flat )]( https://android-arsenal.com/details/1/7261 )
+<h1 align="center">Super Toolbar</h1>
+<p align="center">Android native toolbar on steroids 💪</p>
+<p align="center">
+  <a href="https://travis-ci.org/andrefrsousa/SuperToolbar"><img src="https://travis-ci.org/andrefrsousa/SuperToolbar.svg?branch=master" alt="Build Status"></a>
+  <a href="https://jitpack.io/#andrefrsousa/SuperToolbar"><img src="https://jitpack.io/v/andrefrsousa/SuperToolbar.svg" alt="jitpack"></a>
+  <a href="https://android-arsenal.com/api?level=14"><img src="https://img.shields.io/badge/API-14%2B-orange.svg?style=flat" alt="api"></a>
+  <a href="https://android-arsenal.com/details/1/7261"><img src="https://img.shields.io/badge/Android%20Arsenal-SuperBottomSheet-green.svg?style=flat" alt="Android Arsenal"></a>
+</p>
+  
+### Summary  
 
 **Some key features are:**
 * Animate the toolbar elevation when scrolling.
@@ -28,7 +33,7 @@ Add the dependency:
 
 ```groovy 
 dependencies {
-    implementation 'com.github.andrefrsousa:SuperToolbar:{latest_version}'
+    implementation 'com.github.andrefrsousa:SuperToolbar:1.1.0'
 }
 ```  
 
