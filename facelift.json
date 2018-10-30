@@ -3,7 +3,7 @@
     "subtitle": "Android native Toolbar on steroids 💪",
     "installation": "implementation 'com.github.andrefrsousa:SuperToolbar:{latest_version}'",
     "url": "https://github.com/andrefrsousa/SuperToolbar",
-    "screenshot": "https://github.com/andrefrsousa/SuperToolbar/blob/master/raw/example.gif",
+    "screenshot": "https://raw.githubusercontent.com/andrefrsousa/SuperToolbar/master/raw/example.gif",
     "author": {
         "name": "André Sousa",
         "thumbnail": "https://andrefrsousa.github.io/images/me.png",
