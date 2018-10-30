@@ -1,18 +1,19 @@
-# SuperToolbar
-Android native Toolbar on steroids 💪
+<h1 align="center">Super Toolbar</h1>
+<p align="center">Android native toolbar on steroids 💪</p>
+<p align="center">
+  <a href="https://travis-ci.org/andrefrsousa/SuperToolbar"><img src="https://travis-ci.org/andrefrsousa/SuperToolbar.svg?branch=master" alt="Build Status"></a>
+  <a href="https://jitpack.io/#andrefrsousa/SuperToolbar"><img src="https://jitpack.io/v/andrefrsousa/SuperToolbar.svg" alt="jitpack"></a>
+  <a href="https://android-arsenal.com/api?level=14"><img src="https://img.shields.io/badge/API-14%2B-orange.svg?style=flat" alt="api"></a>
+  <a href="https://android-arsenal.com/details/1/7261"><img src="https://img.shields.io/badge/Android%20Arsenal-SuperBottomSheet-green.svg?style=flat" alt="Android Arsenal"></a>
+</p>
+  
+### Summary  
 
-## Specs  
-[![](https://jitpack.io/v/andrefrsousa/SuperBottomSheet.svg)](https://jitpack.io/#andrefrsousa/SuperToolbar) [![API](https://img.shields.io/badge/API-14%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=14) [![Build Status](https://travis-ci.org/andrefrsousa/SuperToolbar.svg?branch=master)](https://travis-ci.org/andrefrsousa/SuperToolbar) [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-SuperToolbar-green.svg?style=flat )]( https://android-arsenal.com/details/1/7261 )
-
-**Some key features are:**
-* Animate the toolbar elevation when scrolling.
-* Center toolbar title
-* Light title font
+* Animate the toolbar elevation when scrolling
+* Center horizontal the toolbar title
+* Use light title font
 
 Also, it has been written **100% in Kotlin**. ❤️  
-
-## Spread Some :heart:  
-[![GitHub stars](https://img.shields.io/github/stars/andrefrsousa/supertoolbar.svg?style=social&label=Star)](https://github.com/andrefrsousa/supertoolbar) [![GitHub forks](https://img.shields.io/github/forks/andrefrsousa/supertoolbar.svg?style=social&label=Fork)](https://github.com/andrefrsousa/supertoolbar/fork) [![GitHub followers](https://img.shields.io/github/followers/andrefrsousa.svg?style=social&label=Follow)](https://github.com/andrefrsousa)  [![Twitter Follow](https://img.shields.io/twitter/follow/andrefrsousa.svg?style=social)](https://twitter.com/andrefrsousa)
 
 ## Download  
   
@@ -31,7 +32,7 @@ Add the dependency:
 
 ```groovy 
 dependencies {
-    implementation 'com.github.andrefrsousa:SuperToolbar:{latest_version}'
+    implementation 'com.github.andrefrsousa:SuperToolbar:1.1.0'
 }
 ```  
 
@@ -86,6 +87,17 @@ The are a group of general properties that you can define. These properties will
 <attr name="superToolbar_useLightFont" format="boolean"/>
 
 ```
+
+## Project Maintained By
+
+### [André Sousa](https://andrefrsousa.github.io)
+
+Design-focused Engineer | Front-end Developer | Open-Source Enthusiast | Android | Husband | Foodie
+
+<a href="https://www.linkedin.com/in/andrefrsousa/"><img src="https://github.com/andrefrsousa/social-icons/blob/master/linkedin.png?raw=true" width="40" style="margin-right:8px"></a>
+<a href="https://stackoverflow.com/users/1574250/andré-sousa"><img src="https://github.com/andrefrsousa/social-icons/blob/master/stackoverflow.png?raw=true" width="40" style="margin-right:8px"></a>
+<a href="https://medium.com/andré-sousa"><img src="https://github.com/andrefrsousa/social-icons/blob/master/medium.png?raw=true" width="40" style="margin-right:8px"></a>
+<a href="https://twitter.com/andrefrsousa"><img src="https://github.com/andrefrsousa/social-icons/blob/master/twitter.png?raw=true" width="40" style="margin-right:8px"></a>
   
 ## License  
   
