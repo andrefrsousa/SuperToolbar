@@ -1,28 +1,28 @@
 {
-    "title": "SuperToolbar",
-    "subtitle": "Android native Toolbar on steroids 💪",
-    "installation": "implementation 'com.github.andrefrsousa:SuperToolbar:{latest_version}'",
-    "url": "https://github.com/andrefrsousa/SuperToolbar",
-    "screenshot": "https://andrefrsousa.github.io/SuperToolbar/res/example.gif",
-    "author": {
-        "name": "André Sousa",
-        "thumbnail": "https://andrefrsousa.github.io/images/me.png",
-        "homepage": "https://andrefrsousa.github.io"
+  "title": "SuperToolbar",
+  "subtitle": "Android native Toolbar on steroids 💪",
+  "installation": "implementation 'com.github.andrefrsousa:SuperToolbar:{latest_version}'",
+  "url": "https://github.com/andrefrsousa/SuperToolbar",
+  "screenshot": "https://andrefrsousa.github.io/SuperToolbar/res/example.gif",
+  "author": {
+    "name": "André Sousa",
+    "thumbnail": "https://andrefrsousa.github.io/images/me.png",
+    "homepage": "https://andrefrsousa.github.io"
+  },
+  "highlights": [
+    {
+      "title": "Features",
+      "items": [
+        "Animate the toolbar elevation when scrolling",
+        "Center toolbar title",
+        "Light title font"
+      ]
     },
-    "highlights": [
-        {
-            "title": "Features",
-            "items": [
-                "Animate the toolbar elevation when scrolling",
-                "Center toolbar title",
-                "Light title font"
-            ]
-        },
-        {
-            "title": "Links",
-            "items": [
-                "GitHub: <a href='https://github.com/andrefrsousa/SuperToolbar'>https://github.com/andrefrsousa/SuperToolbar</a>"
-            ]
-        }
-    ]
+    {
+      "title": "Links",
+      "items": [
+        "GitHub: <a href='https://github.com/andrefrsousa/SuperToolbar'>https://github.com/andrefrsousa/SuperToolbar</a>"
+      ]
+    }
+  ]
 }

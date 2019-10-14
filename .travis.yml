@@ -1,4 +1,9 @@
 language: android
+
+branches:
+  only:
+    - master
+
 android:
   components:
     # Uncomment the lines below if you want to
@@ -7,12 +12,20 @@ android:
     - tools
 
     # The BuildTools version used by your project
-    - build-tools-28.0.3
+    - build-tools-29.0.2
 
     # The SDK version used to compile your project
-    - android-28
+    - android-29
+
+before_install:
+  - yes | sdkmanager "platforms;android-29"
 
 before_script:
-    - chmod +x gradlew
+  - chmod +x gradlew
+  - mkdir "$ANDROID_HOME/licenses" || true
+  - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
+  - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
+  - yes | sdkmanager --update
+  - yes | sdkmanager --licenses
 
-script: "./gradlew build"
+script: ./gradlew build assembleDebug

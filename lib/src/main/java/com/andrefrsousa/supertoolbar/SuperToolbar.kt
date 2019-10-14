@@ -26,12 +26,12 @@ package com.andrefrsousa.supertoolbar
 import android.content.Context
 import android.graphics.Typeface
 import android.os.Build
-import android.support.v4.view.ViewCompat
-import android.support.v7.widget.AppCompatTextView
-import android.support.v7.widget.Toolbar
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.animation.DecelerateInterpolator
+import androidx.appcompat.widget.AppCompatTextView
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.ViewCompat
 
 private const val DURATION = 250
 
@@ -53,7 +53,11 @@ open class SuperToolbar : Toolbar {
         initView(context, attrs, 0)
     }
 
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         initView(context, attrs, defStyleAttr)
     }
 
@@ -63,8 +67,10 @@ open class SuperToolbar : Toolbar {
         }
 
         with(context.obtainStyledAttributes(attrs, R.styleable.SuperToolbar, defStyleAttr, 0)) {
-            animationDuration = getInt(R.styleable.SuperToolbar_superToolbar_animationDuration, DURATION).toLong()
-            isElevationShown = getBoolean(R.styleable.SuperToolbar_superToolbar_showElevationAtStart, false)
+            animationDuration =
+                getInt(R.styleable.SuperToolbar_superToolbar_animationDuration, DURATION).toLong()
+            isElevationShown =
+                getBoolean(R.styleable.SuperToolbar_superToolbar_showElevationAtStart, false)
             centerTitle = getBoolean(R.styleable.SuperToolbar_superToolbar_centerTitle, false)
             useLightFont = getBoolean(R.styleable.SuperToolbar_superToolbar_useLightFont, false)
             recycle()

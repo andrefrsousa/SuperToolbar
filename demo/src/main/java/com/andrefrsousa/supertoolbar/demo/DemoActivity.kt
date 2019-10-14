@@ -24,14 +24,12 @@
 package com.andrefrsousa.supertoolbar.demo
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.RecyclerView.OnScrollListener
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView.OnScrollListener
 import kotlinx.android.synthetic.main.activity_demo.*
 import kotlinx.android.synthetic.main.list_item.view.*
 
@@ -46,14 +44,18 @@ class DemoActivity : AppCompatActivity() {
         toolbar.title = getString(R.string.app_name)
 
         listener = object : OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+            override fun onScrolled(
+                recyclerView: androidx.recyclerview.widget.RecyclerView,
+                dx: Int,
+                dy: Int
+            ) {
                 super.onScrolled(recyclerView, dx, dy)
                 toolbar.setElevationVisibility(recyclerView.canScrollVertically(-1))
             }
         }
 
         items_list.run {
-            layoutManager = LinearLayoutManager(this@DemoActivity)
+            layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this@DemoActivity)
             adapter = ItemsAdapter()
         }
     }
@@ -71,18 +73,20 @@ class DemoActivity : AppCompatActivity() {
 
 // Inner classes
 
-class ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ViewHolder>() {
+class ItemsAdapter : androidx.recyclerview.widget.RecyclerView.Adapter<ItemsAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(parent.inflate(R.layout.list_item))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        ViewHolder(parent.inflate(R.layout.list_item))
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
     }
 
     override fun getItemCount() = 15
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
         val text: TextView = view.text_view
     }
 }
 
-private fun ViewGroup.inflate(layoutId: Int) = LayoutInflater.from(context).inflate(layoutId, this, false)!!
+private fun ViewGroup.inflate(layoutId: Int) =
+    LayoutInflater.from(context).inflate(layoutId, this, false)!!

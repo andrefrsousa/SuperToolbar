@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="60dp">
 
@@ -9,6 +8,6 @@
             android:text="Hello World!"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:padding="8dp"/>
+            android:padding="8dp" />
 
 </FrameLayout>
