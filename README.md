@@ -32,7 +32,7 @@ Add the dependency:
 
 ```groovy 
 dependencies {
-    implementation 'com.github.andrefrsousa:SuperToolbar:1.1.0'
+    implementation 'com.github.andrefrsousa:SuperToolbar:1.2.0'
 }
 ```  
 
