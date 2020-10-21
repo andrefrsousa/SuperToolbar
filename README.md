@@ -9,15 +9,15 @@
   
 ### Summary  
 
-* Animate the toolbar elevation when scrolling
-* Center horizontal the toolbar title
+* Animate the height of the toolbar as you scroll
+* Center the toolbar title horizontally
 * Use light title font
 
-Also, it has been written **100% in Kotlin**. ❤️  
+It was written **100% in Kotlin** ❤️
 
 ## Download  
   
-This library is available in **jitpack**, so you need to add this repository to your root build.gradle at the end of repositories:
+This library is available in **jitpack**, so to use it you need to add the above statement to your root *build.gradle*:
    
 ```groovy  
 allprojects {
@@ -38,20 +38,20 @@ dependencies {
 
 ## Sample Project  
 
-We have a sample project in Kotlin that demonstrates the lib usages [here](https://github.com/andrefrsousa/SuperToolbar/blob/master/demo/src/main/java/com/andrefrsousa/supertoolbar/demo/DemoActivity.kt).
+We have a sample project in Kotlin that demonstrates the use of the library [here](https://github.com/andrefrsousa/SuperToolbar/blob/master/demo/src/main/java/com/andrefrsousa/supertoolbar/demo/DemoActivity.kt).
 
 ![](/raw/example.gif)
 
-## Usage  
+## Use  
 
-It is recommended to check the sample project to get a complete understanding of all the features offered by the library.  
-In order to show the toolbar elevation you just need to call:
+It is recommended that you review the sample project to get a full understanding of all the features offered by the library. 
+To display the height of the toolbar, you only need to call:
 
 ```kotlin
 fun setElevationVisibility(show: Boolean)
 ```  
 
-If what to have the same effect found in Google Messages app for example, you to add a scroll listener to your RecyclerView or ScrollView. Like this:
+If you want to have the same effect as the one used in Google Messages, for example, add a scroll listener to your *RecyclerView* or *ScrollView*. Like this:
 
 ```kotlin
 
@@ -67,34 +67,23 @@ myRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
   
 ## Customization
   
-You can costumize your toolber using the following attributes:
+You can costume your toolbar with the following attributes:
 
 ```xml
 
-// The duration of the elevation animation. By default is 250 miliseconds.
+// The duration of the elevation animation. By default it is 250 miliseconds.
 <attr name="superToolbar_animationDuration" format="integer"/>
 
 // If you want to show the toolbar elevation when created. By default is false.
 <attr name="superToolbar_showElevationAtStart" format="boolean"/>
 
-// Center the toolbar title. By default is false.
+// Center the toolbar title. Is false by default.
 <attr name="superToolbar_centerTitle" format="boolean"/>
 
-// Use a light font as the toolbar title. Default is false.
+// Use a light font as the title of the toolbar. The default value is false.
 <attr name="superToolbar_useLightFont" format="boolean"/>
 
 ```
-
-## Project Maintained By
-
-### [André Sousa](https://andrefrsousa.github.io)
-
-Design-focused Engineer | Front-end Developer | Open-Source Enthusiast | Android | Husband | Foodie
-
-<a href="https://www.linkedin.com/in/andrefrsousa/"><img src="https://github.com/andrefrsousa/social-icons/blob/master/linkedin.png?raw=true" width="40" style="margin-right:8px"></a>
-<a href="https://stackoverflow.com/users/1574250/andré-sousa"><img src="https://github.com/andrefrsousa/social-icons/blob/master/stackoverflow.png?raw=true" width="40" style="margin-right:8px"></a>
-<a href="https://medium.com/andré-sousa"><img src="https://github.com/andrefrsousa/social-icons/blob/master/medium.png?raw=true" width="40" style="margin-right:8px"></a>
-<a href="https://twitter.com/andrefrsousa"><img src="https://github.com/andrefrsousa/social-icons/blob/master/twitter.png?raw=true" width="40" style="margin-right:8px"></a>
   
 ## License  
   
