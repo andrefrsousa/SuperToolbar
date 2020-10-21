@@ -67,7 +67,7 @@ myRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
   
 ## Adjustments
   
-You can costume your toolbar with the following attributes:
+You can costumize your toolbar with the following attributes:
 
 ```xml
 
