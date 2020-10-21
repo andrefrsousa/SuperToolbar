@@ -13,7 +13,6 @@
 * Center the toolbar title horizontally
 * Use light title font
 
-It was written **100% in Kotlin** ❤️
 
 ## Download  
   
