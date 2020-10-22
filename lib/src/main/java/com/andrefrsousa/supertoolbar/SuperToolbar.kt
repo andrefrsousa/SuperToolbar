@@ -28,22 +28,25 @@ import android.graphics.Typeface
 import android.os.Build
 import android.util.AttributeSet
 import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.animation.DecelerateInterpolator
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
+import com.andrefrsousa.supertoolbar.databinding.SuperToolbarTitleBinding
 
 private const val DURATION = 250
 
 open class SuperToolbar : Toolbar {
 
-    private lateinit var titleView: AppCompatTextView
+    private lateinit var binding: SuperToolbarTitleBinding
 
     private var isElevationShown = false
     private var centerTitle = false
     private var useLightFont = false
     private var animationDuration = 0L
     private var toolbarElevation = 0f
+
+    // region Constructor
 
     constructor(context: Context) : super(context) {
         initView(context, null, 0)
@@ -62,15 +65,11 @@ open class SuperToolbar : Toolbar {
     }
 
     private fun initView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) {
-        if (isInEditMode || attrs == null) {
-            return
-        }
+        if (attrs == null) return
 
         with(context.obtainStyledAttributes(attrs, R.styleable.SuperToolbar, defStyleAttr, 0)) {
-            animationDuration =
-                getInt(R.styleable.SuperToolbar_superToolbar_animationDuration, DURATION).toLong()
-            isElevationShown =
-                getBoolean(R.styleable.SuperToolbar_superToolbar_showElevationAtStart, false)
+            animationDuration = getInt(R.styleable.SuperToolbar_superToolbar_animationDuration, DURATION).toLong()
+            isElevationShown = getBoolean(R.styleable.SuperToolbar_superToolbar_showElevationAtStart, false)
             centerTitle = getBoolean(R.styleable.SuperToolbar_superToolbar_centerTitle, false)
             useLightFont = getBoolean(R.styleable.SuperToolbar_superToolbar_useLightFont, false)
             recycle()
@@ -80,38 +79,35 @@ open class SuperToolbar : Toolbar {
         with(ViewCompat.getElevation(this)) {
             toolbarElevation = if (this == 0f) {
                 resources.getDimension(R.dimen.super_toolbar_default_elevation)
-            } else {
-                this
-            }
+
+            } else this
         }
 
         // By default we remove the elevation when creating the toolbar
-        if (!isElevationShown) {
-            ViewCompat.setElevation(this, 0f)
-        }
+        if (!isElevationShown) ViewCompat.setElevation(this, 0f)
 
         // Add a custom title view
         if (centerTitle || useLightFont) {
-            titleView = inflate(R.layout.super_toolbar_title) as AppCompatTextView
+            binding = SuperToolbarTitleBinding.inflate(LayoutInflater.from(context), this, false)
 
-            if (useLightFont) {
-                titleView.typeface = Typeface.SANS_SERIF
-            }
+            if (useLightFont) binding.toolbarTitle.typeface = Typeface.SANS_SERIF
 
             if (centerTitle) {
-                val layoutParams = titleView.layoutParams as Toolbar.LayoutParams
+                val layoutParams = binding.toolbarTitle.layoutParams as LayoutParams
                 layoutParams.gravity = Gravity.CENTER
-                addView(titleView, layoutParams)
+                addView(binding.toolbarTitle, layoutParams)
 
-            } else {
-                addView(titleView)
-            }
+            } else addView(binding.toolbarTitle)
         }
     }
 
+    // endregion
+
+    // region Methods from Toolbar
+
     override fun setTitle(resId: Int) {
-        if (::titleView.isInitialized) {
-            titleView.setText(resId)
+        if (::binding.isInitialized) {
+            binding.toolbarTitle.setText(resId)
             return
         }
 
@@ -119,23 +115,21 @@ open class SuperToolbar : Toolbar {
     }
 
     override fun setTitle(title: CharSequence?) {
-        if (::titleView.isInitialized) {
-            titleView.text = title
+        if (::binding.isInitialized) {
+            binding.toolbarTitle.text = title
             return
         }
 
         super.setTitle(title)
     }
 
+    @Suppress("DEPRECATION")
     override fun setTitleTextAppearance(context: Context?, resId: Int) {
-        if (::titleView.isInitialized) {
-            if (hasMinimumSdk(Build.VERSION_CODES.M)) {
-                titleView.setTextAppearance(resId)
+        if (::binding.isInitialized) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                binding.toolbarTitle.setTextAppearance(resId)
 
-            } else {
-                titleView.setTextAppearance(context, resId)
-            }
-
+            } else binding.toolbarTitle.setTextAppearance(context, resId)
             return
         }
 
@@ -143,15 +137,17 @@ open class SuperToolbar : Toolbar {
     }
 
     override fun setTitleTextColor(color: Int) {
-        if (::titleView.isInitialized) {
-            titleView.setTextColor(color)
+        if (::binding.isInitialized) {
+            binding.toolbarTitle.setTextColor(color)
             return
         }
 
         super.setTitleTextColor(color)
     }
 
-    //region PUBLIC METHODS
+    // endregion
+
+    //region Public methods
 
     /**
      * Toggles the toolbar elevation visibility using an animation
@@ -159,9 +155,7 @@ open class SuperToolbar : Toolbar {
      * @param show true if you want to show the elevation; false otherwise
      */
     fun setElevationVisibility(show: Boolean) {
-        if (isElevationShown == show) {
-            return
-        }
+        if (isElevationShown == show) return
 
         isElevationShown = show
 

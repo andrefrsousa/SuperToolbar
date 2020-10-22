@@ -5,9 +5,9 @@
 
     <TextView
         android:id="@+id/text_view"
-        android:text="Hello World!"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:text="Hello World!" />
 
 </FrameLayout>
