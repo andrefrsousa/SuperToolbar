@@ -1,7 +1,7 @@
 <h1 align="center">Super Toolbar</h1>
 <p align="center">Android native toolbar on steroids 💪</p>
 <p align="center">
-  <a href="https://github.com/andrefrsousa/SuperToolbar/actions?query=workflow%3A%22Android+CI%22"><img src=https://github.com/andrefrsousa/SuperToolbar/workflows/Android%20CI/badge.svg?branch=master" alt="Build Status"></a>
+  <a href="https://github.com/andrefrsousa/SuperToolbar/actions?query=workflow%3A%22Android+CI%22"><img src="https://img.shields.io/github/workflow/status/andrefrsousa/SuperToolbar/Android%20CI" alt="Build Status"></a>
   <a href="https://jitpack.io/#andrefrsousa/SuperToolbar"><img src="https://jitpack.io/v/andrefrsousa/SuperToolbar.svg" alt="jitpack"></a>
   <a href="https://android-arsenal.com/api?level=14"><img src="https://img.shields.io/badge/API-14%2B-orange.svg?style=flat" alt="api"></a>
 </p>
